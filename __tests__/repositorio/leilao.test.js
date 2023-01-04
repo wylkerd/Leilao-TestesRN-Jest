@@ -35,6 +35,11 @@ const mockRequisicaoErro = () => {
 
 // TESTES UNITÁRIOS COM MOCK, SIMULANDO TESTE DE INTEGRAÇÃO COM WEB API
 describe('repositorio/leilao', () => {
+
+  // Rodando a função antes de cada teste para limpar o mock e a chamada da api, para reset a contagem  de requisições feitas
+  beforeEach(() => {
+    apiLeiloes.get.mockClear(); // limpa as requisições anteriormente feitas
+  });
   
   describe('obtemLeiloes', () => {
 
@@ -43,9 +48,12 @@ describe('repositorio/leilao', () => {
       apiLeiloes.get.mockImplementation(() => mockRequisicao(mockLeiloes))
 
       const leiloes = await obtemLeiloes();
-      // console.log(leiloes);
-
+      
       expect(leiloes).toEqual(mockLeiloes);
+
+      // Expects de validação das chamadas
+      expect(apiLeiloes.get).toHaveBeenCalledWith('/leiloes'); // get tenha sido chamado com parâmetro /leiloes
+      expect(apiLeiloes.get).toHaveBeenCalledTimes(1); // get tenha sido chamado apenas 1 vez
     });
 
     it('deve retornar uma lista vazia quando a requisição falhar', async () => {
@@ -55,8 +63,26 @@ describe('repositorio/leilao', () => {
       const leiloes = await obtemLeiloes();
 
       expect(leiloes).toEqual([]);
+
+      // Expects de validação das chamadas
+      expect(apiLeiloes.get).toHaveBeenCalledWith('/leiloes'); // get tenha sido chamado com parâmetro /leiloes
+      expect(apiLeiloes.get).toHaveBeenCalledTimes(1); // get tenha sido chamado apenas 1 vez
     });
 
   });
 
 });
+
+/**
+ * Nesta aula, aprendemos a simular funções para que os dados originais não sejam afetados. Usamos alguns métodos do jest para trabalhar com mocks, e abaixo estão os mais utilizados:
+
+    mockClear(): Limpa todos os registros das chamadas das funções;
+
+    mockReset(): Faz tudo o que mockClear() faz, e também limpa as implementações e valores a serem retornados, voltando a ser como quando criamos uma função jest.fn();
+
+    mockRestore(): Faz tudo o que mockClear() faz, e também volta a implementação de método original;
+
+    mockImplementation(fn): Seta uma nova implementação para a função mockada. Há um atalho para esse método: jest.fn(implementation);
+
+    mockReturnValue(value): Seta um valor fixo a ser retornado.
+ */
