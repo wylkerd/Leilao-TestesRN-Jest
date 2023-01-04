@@ -6,7 +6,7 @@ import {
 } from "../constantes/estadosLance";
 
 export function validaFormatoNumericoDoLance(valorEmTexto) {
-  if (valorEmTexto.match(/^[1-9]+[0-9]*(\,[0-9]{1,2})?$/)) {
+  if (String(valorEmTexto).match(/^[1-9]+[0-9]*(\,[0-9]{1,2})?$/)) {
     return VALIDO;
   }
 
@@ -28,7 +28,7 @@ export function validaLance(valor, { lances, valorInicial }) {
   return lanceMaiorQueLances;
 }
 
-function validaLanceMaiorOuIgualAoInicial(valor, valorInicial) {
+export function validaLanceMaiorOuIgualAoInicial(valor, valorInicial) {
   if (valor >= valorInicial) {
     return VALIDO;
   }
@@ -36,7 +36,7 @@ function validaLanceMaiorOuIgualAoInicial(valor, valorInicial) {
   return MENOR_QUE_VALOR_INICIAL;
 }
 
-function validaLanceMaiorQueLances(valor, lances) {
+export function validaLanceMaiorQueLances(valor, lances) {
   const lanceMaiorQueValor = lances.find(lance => lance.valor >= valor);
   if (!lanceMaiorQueValor) {
     return VALIDO;
