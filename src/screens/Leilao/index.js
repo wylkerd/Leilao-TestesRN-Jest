@@ -3,9 +3,9 @@ import { useRoute } from '@react-navigation/native';
 import useLeilao from '../../hooks/useLeilao';
 
 import { FlatList, View, StyleSheet } from 'react-native';
-import Topo from './componentes/Topo';
-import Lance from './componentes/Lance';
-import EnviaLance from './componentes/EnviaLance';
+import Topo from './components/Topo';
+import Lance from './components/Lance';
+import EnviaLance from './components/EnviaLance';
 
 export default function Leilao() {
   const route = useRoute();

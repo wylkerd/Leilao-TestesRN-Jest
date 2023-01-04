@@ -2,8 +2,8 @@ import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
-import Icone from '../../../componentes/Icone';
-import Cartao from '../../../componentes/Cartao';
+import Icone from '../../../components/Icone';
+import Cartao from '../../../components/Cartao';
 
 import { formataDecimalParaReal } from '../../../negocio/formatadores/moeda';
 

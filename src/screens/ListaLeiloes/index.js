@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import useListaLeiloes from '../../hooks/useListaLeiloes';
 
 import { View, FlatList, StyleSheet } from 'react-native';
-import Leilao from './componentes/Leilao';
+import Leilao from './components/Leilao';
 
 export default function ListaLeiloes() {
   const [leiloes, obtemLeiloes] = useListaLeiloes();

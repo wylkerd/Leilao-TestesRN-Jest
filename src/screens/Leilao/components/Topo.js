@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Text, View, StyleSheet } from 'react-native';
-import Icone from '../../../componentes/Icone';
+import Icone from '../../../components/Icone';
 
 import { formataDecimalParaReal } from '../../../negocio/formatadores/moeda';
 import { formataMaiorLanceDoLeilao } from '../../../negocio/formatadores/lance';

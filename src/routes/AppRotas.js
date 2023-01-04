@@ -2,8 +2,8 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { NavigationContainer } from '@react-navigation/native';
-import ListaLeiloes from '../telas/ListaLeiloes';
-import Leilao from '../telas/Leilao';
+import ListaLeiloes from '../screens/ListaLeiloes';
+import Leilao from '../screens/Leilao';
 
 const Stack = createNativeStackNavigator();
 
