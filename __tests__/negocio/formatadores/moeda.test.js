@@ -27,3 +27,17 @@ describe("negocio/formatadores/moeda", () => {
     })
   })
 })
+
+/**
+ * Para checar se os valores nos testes são os esperados, usamos expects. Na biblioteca jest, existem várias formas de fazer isso, sendo as principais:
+
+  toBe(): compara inteiros ou textos;
+
+  toBeCloseTo(): compara pontos flutuantes obtidos através de operações matemáticas, pois, devido a arredondamentos, podem haver erros com toBe();
+
+  toBeFalsy()/toBeTruthy(): compara valores falsos/verdadeiros em um contexto booleano. No caso de falsy, não apenas false será validado, mas valores como null, 0, '', 
+      undefined e NaN também. O restante dos valores é considerado truthy;
+
+  toEqual(): compara objetos, verificando se as propriedades internas são iguais. Usar toBe() não retornará o mesmo resultado.
+
+*/
