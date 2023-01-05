@@ -38,6 +38,7 @@ describe('screens/Leilao/components/EnviaLance', () => {
     })
     expect(enviaLance).toHaveBeenCalledWith("10");
 
+    // waitFor e Render uitilizam o act() e evita erro para utilizar hooks
     await waitFor(() => {
       expect(getByText(ENVIADO)).toBeTruthy();
     });
