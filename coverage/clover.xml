@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1672859976864" clover="3.2.0">
-  <project timestamp="1672859976864" name="All files">
-    <metrics statements="140" coveredstatements="44" conditionals="43" coveredconditionals="10" methods="42" coveredmethods="13" elements="225" coveredelements="67" complexity="0" loc="140" ncloc="140" packages="13" files="19" classes="19"/>
+<coverage generated="1672937795569" clover="3.2.0">
+  <project timestamp="1672937795569" name="All files">
+    <metrics statements="140" coveredstatements="67" conditionals="43" coveredconditionals="17" methods="42" coveredmethods="19" elements="225" coveredelements="103" complexity="0" loc="140" ncloc="140" packages="13" files="19" classes="19"/>
     <package name="react-native-testes-com-jest">
       <metrics statements="2" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="App.js" path="C:\Users\ModalGR\Documents\Alura\react-native-testes-com-jest\App.js">
@@ -25,7 +25,7 @@
       </file>
     </package>
     <package name="react-native-testes-com-jest.src.hooks">
-      <metrics statements="29" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <metrics statements="29" coveredstatements="7" conditionals="6" coveredconditionals="0" methods="7" coveredmethods="3"/>
       <file name="useLeilao.js" path="C:\Users\ModalGR\Documents\Alura\react-native-testes-com-jest\src\hooks\useLeilao.js">
         <metrics statements="22" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="9" count="0" type="stmt"/>
@@ -52,26 +52,26 @@
         <line num="47" count="0" type="stmt"/>
       </file>
       <file name="useListaLeiloes.js" path="C:\Users\ModalGR\Documents\Alura\react-native-testes-com-jest\src\hooks\useListaLeiloes.js">
-        <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
       </file>
     </package>
     <package name="react-native-testes-com-jest.src.negocio.constantes">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="estadosLance.js" path="C:\Users\ModalGR\Documents\Alura\react-native-testes-com-jest\src\negocio\constantes\estadosLance.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
       </file>
     </package>
     <package name="react-native-testes-com-jest.src.negocio.formatadores">
@@ -172,26 +172,26 @@
       </file>
     </package>
     <package name="react-native-testes-com-jest.src.screens.Leilao.components">
-      <metrics statements="22" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <metrics statements="22" coveredstatements="16" conditionals="12" coveredconditionals="7" methods="5" coveredmethods="3"/>
       <file name="EnviaLance.js" path="C:\Users\ModalGR\Documents\Alura\react-native-testes-com-jest\src\screens\Leilao\components\EnviaLance.js">
-        <metrics statements="17" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
+        <metrics statements="17" coveredstatements="16" conditionals="12" coveredconditionals="7" methods="3" coveredmethods="3"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="52" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="32" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="53" count="6" type="stmt"/>
       </file>
       <file name="Lance.js" path="C:\Users\ModalGR\Documents\Alura\react-native-testes-com-jest\src\screens\Leilao\components\Lance.js">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -235,7 +235,7 @@
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="apiLeiloes.js" path="C:\Users\ModalGR\Documents\Alura\react-native-testes-com-jest\src\services\apiLeiloes.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="4" count="2" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
       </file>
     </package>
   </project>
