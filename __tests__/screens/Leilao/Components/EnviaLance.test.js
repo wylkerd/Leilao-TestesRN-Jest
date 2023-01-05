@@ -46,3 +46,13 @@ describe('screens/Leilao/components/EnviaLance', () => {
   });
 
 });
+
+/**
+ * Nesta aula, aprendemos a:
+
+  - Instalar as bibliotecas @testing-library/react-native e @testing-library/react-hooks;
+  - Testar hooks usando a biblioteca @testing-library/react-hooks;
+  - Renderizar componentes em memória usando a @testing-library/react-native;
+  - Capturar campos do componente carregado em memória;
+  - Efetuar ações usando o fireEvent da @testing-library/react-native.
+ */
