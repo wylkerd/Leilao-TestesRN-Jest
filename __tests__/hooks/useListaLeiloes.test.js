@@ -57,3 +57,34 @@ describe('hooks/useListaLeiloes', () => {
   });
 
 });
+
+/*
+// EXEMPLO DE TESTE PARA HOOK AVANÇADO QUE UTILIZA UM COMPONENTE
+import React from 'react';
+import { renderHook, act } from '@testing-library/react-hooks';
+import { useLanguage, LanguageProvider } from '@hooks/useLanguage';
+import { language } from '@mocks/texts'
+
+describe('@hooks/useLanguage', () => {
+
+  it('should return the texts of language', () => {
+
+    const wrapper = ({ children }: any) => <LanguageProvider initalState='pt' >{children}</LanguageProvider>
+    const { result, waitForNextUpdate } = renderHook(() => useLanguage(), { wrapper });
+
+    expect(result.current.langTexts).toBe(language.pt);
+    // console.log(result.current.langTexts);
+
+    expect(typeof result.current.setLang).toBe('function')
+    // console.log(typeof result.current.setLang);
+
+    act(() => {
+      result.current.setLang('en')
+    })
+
+    expect(result.current.langTexts).toBe(language.en);
+    // console.log(result.current.langTexts);
+  });
+});
+
+*/
