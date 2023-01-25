@@ -41,6 +41,8 @@ describe('repositorio/lance', () => {
   beforeEach(() => {
     apiLeiloes.get.mockClear(); // limpa as requisições anteriormente feitas
     apiLeiloes.post.mockClear(); // limpa as requisições anteriormente feitas
+    // ou
+    // jest.clearAllMocks();
   });
   
   describe('obtemLancesDoLeilao', () => {
