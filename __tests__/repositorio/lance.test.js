@@ -105,6 +105,30 @@ describe('repositorio/lance', () => {
 
   });
   
+  /** Exemplo de chamada para API usando mock numa função de hook
+  import React from 'react';
+  import { renderHook, act } from '@testing-library/react-hooks'
+  import { NameProvider, useName } from '@hooks/auth'
+  import api from '@services/api'
+  
+  describe('sendName', () => {
+    
+    it('should receive the complete name of User', async () => {
+      api.post.mockImplementation(() => mockRequisicao('wylkerd silva'))
+      const wrapper = ({ children }) => <NameProvider>{ children }</NameProvider>
+      const { result } = renderHook(() => useName(), { wrapper });
+
+      expect(result.current.completeName).toEqual({})
+
+      await act(() => {
+        result.current.sendSMS({ ddd: '13', numero: '11111111' })
+      })
+
+      expect(api.post).toHaveBeenCalledTimes(1)
+    });
+  });
+  **/
+  
 });
 
 /**
