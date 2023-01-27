@@ -115,16 +115,24 @@ describe('repositorio/lance', () => {
     
     it('should receive the complete name of User', async () => {
       api.post.mockImplementation(() => mockRequisicao('wylkerd silva'))
+      
+      // api.post.mockResolvedValue({
+      //   data: {
+      //     data: 'Wylkerd Silva'
+      //   }
+      // })
+      
       const wrapper = ({ children }) => <NameProvider>{ children }</NameProvider>
       const { result } = renderHook(() => useName(), { wrapper });
 
       expect(result.current.completeName).toEqual({})
 
-      await act(() => {
-        result.current.sendSMS({ ddd: '13', numero: '11111111' })
+      await act(async () => {
+        await result.current.sendSMS({ ddd: '13', numero: '11111111' })
       })
 
       expect(api.post).toHaveBeenCalledTimes(1)
+      expect(result.current.completeName).toEqual(user)
     });
   });
   **/
