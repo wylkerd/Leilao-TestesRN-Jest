@@ -114,7 +114,7 @@ describe('repositorio/lance', () => {
   describe('sendName', () => {
     
     it('should receive the complete name of User', async () => {
-      api.post.mockImplementation(() => mockRequisicao('wylkerd silva'))
+      api.post.mockImplementation(() => mockRequisicao('Wylkerd Santos Silva'))
       
       // api.post.mockResolvedValue({
       //   data: {
@@ -128,12 +128,23 @@ describe('repositorio/lance', () => {
       expect(result.current.completeName).toEqual({})
 
       await act(async () => {
-        await result.current.sendSMS({ ddd: '13', numero: '11111111' })
+        await result.current.sendName({ nome: 'Wylkerd', numero: 'Santos Silva' })
       })
 
       expect(api.post).toHaveBeenCalledTimes(1)
-      expect(result.current.completeName).toEqual(user)
+      expect(result.current.completeName).toEqual('Wylkerd Santos Silva')
     });
+    
+     it('should return new Error', async () => {
+      api.post.mockImplementation(() => mockRequisicaoErro())
+      const wrapper = ({ children }) => <NameProvider>{ children }</NameProvider>
+      const { result } = renderHook(() => useName(), { wrapper });
+
+      await act(async () => {
+        await expect(result.current.sendName({ nome: null, sobrenome: null })).rejects.toThrow(Error);
+      })
+    });
+    
   });
   **/
   
